@@ -1,6 +1,7 @@
 package com.hamzaTech.gestionstock.entities;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -35,7 +36,10 @@ public class Bon implements Serializable {
 	      inverseJoinColumns = @JoinColumn(name = "matriel_id"))
 	    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	    private List<Materiel> listMateriel ;
-
+        
+	    
+	   private  LocalDate dateDePret;
+	   
 		public Long getId() {
 			return id;
 		}
@@ -58,6 +62,14 @@ public class Bon implements Serializable {
 
 		public void setListMateriel(List<Materiel> listMateriel) {
 			this.listMateriel = listMateriel;
+		}
+
+		public LocalDate getDateDePret() {
+			return dateDePret;
+		}
+
+		public void setDateDePret(LocalDate dateDePret) {
+			this.dateDePret = dateDePret;
 		}
 		
 	    

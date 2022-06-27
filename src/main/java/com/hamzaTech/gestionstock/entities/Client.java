@@ -19,6 +19,8 @@ public class Client implements Serializable {
 	    private String prenom;
 	    
 	    private String adresse;
+	    
+	    private String telephone;
 
 		public Long getId() {
 			return id;
@@ -50,6 +52,14 @@ public class Client implements Serializable {
 
 		public void setAdresse(String adresse) {
 			this.adresse = adresse;
+		}
+
+		public String getTelephone() {
+			return telephone;
+		}
+
+		public void setTelephone(String telephone) {
+			this.telephone = telephone;
 		}
 	    
 	    
